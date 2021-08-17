@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    outline: none;
+}
+
+html {
+    font-size: 90%;
+    box-sizing: initial;
+    line-height: 1.2;
+    background-color: #ecf0f3;
+    transition: background 0.1s linear;
+}
+
+body{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:center;
+    margin: 0;
+    padding: 0;
+}
+
+.mode{
+    position: relative;
+    padding: 2% 0% 5% 10%;
+}
+.checkbox {
+    height: 40px;
+    width: 100px;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translatex(19px);
+}
+
+label {
+    display: flex;
+    position: relative;
+    background-color: #404346;
+    width: 38px;
+    height: 19px;
+    border-radius: 50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+label .fa-moon {
+    color: #4D4C7D;
+}
+label .fa-sun {
+    color: #f1c40f;
+}
+label .ball {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s linear;
+}
+
+.container{
+    height: 100vh;
+    padding: 5%;
+    display:unset;
+    justify-content:initial ;
+    align-items: left;
+}
+
+.calculator{
+    background-color: #ecf0f3;
+    padding: 15px;
+    border-radius: 22.5px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+    5px 5px 12px rgba(0, 0, 0, 0.16);
+    display: inline-grid;
+    grid-template-columns: repeat(4, 60px);
+}
+
+input{
+    grid-column: span 4;
+    height: 100px;
+    width: 240px;
+    background-color: #ecf0f3;
+    box-shadow: inset -5px -5px 12px #ffffff,
+    inset 5px 5px 12px rgba(126, 67, 67, 0.16);
+    border: none;
+    border-radius: 10px;
+    color: rgba(70,70,70);
+    font-size: 24px;
+    text-align: end;
+    margin: 10px auto 25px;
+    padding: 20px;
+}
+
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+    5px 5px 12px rgba(126, 67, 67, 0.16);
+    border: none;
+    border-radius: 50%;
+    margin: 7px;
+    font-size: 1.15rem;
+}
+
+.clear, .delete{
+    color:rgb(245, 80, 39);
+}
+
+.operator{
+    color:rgb(245, 80, 39);
+}
+
+.equal{
+    box-shadow: -5px -5px 12px #ffffff,
+    5px 5px 12px rgba(126, 67, 67, 0.16);
+    color: #15e38a;
+    font-size: 1.25rem;
+}
+
+button:active{
+    box-shadow: -5px -5px 12px #ffffff,
+    5px 5px 12px rgba(126, 67, 67, 0.16),
+    inset -5px -5px 12px #ffffff,
+    inset 5px 5px 12px rgba(126, 67, 67, 0.16);
+}
+
+/* Dark Theme */
+
+html[data-theme="dark"] {
+    font-size: 90%;
+    box-sizing: initial;
+    line-height: 1.2;
+    background-color: #303a4d;
+    transition: background 0.2s linear;
+}
+
+[data-theme="dark"] label {
+    display: flex;
+    position: relative;
+    background-color: #051b2c;
+    width: 38px;
+    height: 19px;
+    border-radius: 50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+[data-theme="dark"] .checkbox {
+    height: 40px;
+    width: 100px;
+    opacity: 0;
+    position: absolute;
+}
+
+[data-theme="dark"] .calculator{
+    /* background-color: #03101a; */
+    background-color: #010e18;
+    padding: 15px;
+    border-radius: 22.5px;
+    box-shadow: inset 5px 5px 12px #0d1725,
+    5px 5px 12px rgba(0, 0, 0, 0.5);
+    display: inline-grid;
+    grid-template-columns: repeat(4, 60px);
+}
+
+[data-theme="dark"] input{
+    grid-column: span 4;
+    height: 100px;
+    width: 240px;
+    background-color: #03101a;
+    box-shadow: inset -3px -3px 12px #0d1725,
+    inset 5px 5px 5px #040207;
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: end;
+    margin: 10px auto 25px;
+    padding: 20px; 
+}
+
+[data-theme="dark"] button{
+    height: 48px;
+    width: 48px;
+    background-color: #03101a;
+    box-shadow: -5px -5px 12px #0d1725,
+    5px 5px 12px #040207;
+    border: none;
+    border-radius: 50%;
+    margin: 7px;
+    font-size: 1.15rem;
+}
+
+[data-theme="dark"] .number, 
+[data-theme="dark"] .decimal{
+    color: #ecf0f3;
+}
+
+[data-theme="dark"] .equal{
+    box-shadow: -5px -5px 12px #0d1725,
+    5px 5px 12px #040207;
+    color: #15e38a;
+    font-size: 1.25rem;
+}
+
+[data-theme="dark"] button:active{
+    box-shadow: -5px -5px 12px rgba(20, 2, 20, 0.16),
+    5px 5px 12px #040207,
+    inset -5px -5px 12px rgba(20, 2, 20, 0.16),
+    inset 5px 5px 12px #0d1725;
+}

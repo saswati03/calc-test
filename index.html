@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphic Calc</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="mode">
+                <input type="checkbox" class="checkbox" name="theme" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon fa-xs"></i>
+                    <i class="fas fa-sun fa-xs"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <input type ="text" placeholder="0" id="output-screen" readonly>
+            <button onclick="Clear()" class="clear">AC</button>
+            <button onclick="del()" class="delete">DEL</button>
+            <button onclick="percentageCalculate('%')" class="operator">%</button>
+            <button onclick="display('/')" class="operator">/</button>
+            <button onclick="display('7')" class="number">7</button>
+            <button onclick="display('8')" class="number">8</button>
+            <button onclick="display('9')" class="number">9</button>
+            <button onclick="display('*')" class="operator">x</button>
+            <button onclick="display('4')" class="number">4</button>
+            <button onclick="display('5')" class="number">5</button>
+            <button onclick="display('6')" class="number">6</button>
+            <button onclick="display('-')" class="operator">-</button>
+            <button onclick="display('1')" class="number">1</button>
+            <button onclick="display('2')" class="number">2</button>
+            <button onclick="display('3')" class="number">3</button>
+            <button onclick="display('+')" class="operator">+</button>
+            <button onclick="display('0')" class="number">0</button>
+            <button onclick="display('00')" class="number">00</button>
+            <button onclick="display('.')" class="decimal">.</button>
+            <button onclick="Calculate()" class="equal">=</button>
+        </div>
+    </div>
+
+    <!-- Script -->    
+    <script src="index.js" charset="utf-8"></script>
+    
+</body>
+</html>
